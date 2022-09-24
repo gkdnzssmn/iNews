@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="325dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="0dp"
+    android:id="@+id/newBg"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:visibility="visible"
+        android:id="@+id/newsLay">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            app:cardCornerRadius="9dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/newCard"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/newImg"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/image"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_below="@id/newCard"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:id="@+id/title"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:textIsSelectable="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@id/title"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="horizontal"
+            android:id="@+id/contain"
+            android:textIsSelectable="true"
+            android:text=""
+            android:layout_above="@id/userImgCard"
+            android:layout_marginBottom="5dp"
+            android:textStyle="normal"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:cardElevation="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="12dp"
+            android:id="@+id/userImgCard">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:id="@+id/userImg"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/userImgCard"
+            android:layout_alignTop="@id/userImgCard"
+            android:layout_alignBottom="@id/userImgCard"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:id="@+id/userName"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heart"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/icons"
+            android:id="@+id/heart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heart"
+            android:layout_alignTop="@id/userName"
+            android:layout_alignBottom="@id/userName"
+            android:gravity="center"
+            android:layout_toStartOf="@id/heart"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/icons"
+            android:id="@+id/rating" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

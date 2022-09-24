@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/plat"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:titleTextColor="?attr/colorSecondary"
+        android:background="@color/plat"
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        tools:targetApi="m">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            android:foreground="@drawable/ripple"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/userCard"
+            android:layout_gravity="center|end">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/userPP"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/userpp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchBar"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="10dp"
+            app:searchIcon="@drawable/search"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/categorys"
+        android:scrollbarThumbHorizontal="@color/transparent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:singleSelection="true"
+            android:id="@+id/categoryChips"
+            android:layout_marginHorizontal="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hepsi"
+                android:checkable="true"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gündem"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teknoloji"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ekonomi"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sağlık"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yaşam"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spor"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siyaset"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eğitim"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                app:checkedIconTint="@color/chips_text"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dünya"
+                android:checkable="true"
+                app:chipBackgroundColor="@color/chips"
+                android:textColor="@color/chips_text"
+                android:layout_marginEnd="20dp"
+                app:checkedIconTint="@color/chips_text" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/categorys"
+        android:layout_above="@id/adView"
+        android:layout_marginBottom="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/newsRecycler" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/adView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:foreground="@drawable/ripple"
+        app:cardBackgroundColor="@color/purple"
+        android:id="@+id/createNews"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icons"
+            android:src="@drawable/pencil_square"
+            app:tint="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5937643397203975/4184553050">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

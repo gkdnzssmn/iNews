@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">iNews</string>
+    <string name="icons">icons</string>
+    <string name="share">Paylaş</string>
+    <string name="title">Başlık</string>
+    <string name="news">Haberiniz</string>
+    <string name="def_size">14sp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="preview">Önizleme</string>
+    <string name="image">image</string>
+    <string name="edit">Düzenle</string>
+    <string name="tag">Etiketler</string>
+    <string name="category">Kategori</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_with_google">Google ile devam et</string>
+    <string name="name">İsim</string>
+    <string name="age">Yaş</string>
+    <string name="borndate">Doğum Tarihiniz</string>
+    <string name="gender">Cinsiyet</string>
+    <string name="userpp">userpp</string>
+    <string name="bio">Biyografi</string>
+    <string name="wcInfo">Birkaç bilgiyi doldurduktan sonra devam edebiliriz.</string>
+    <string name="wcText">Hoşgeldiniz, hadi profilinizi oluşturalım</string>
+    <string name="start">Başla</string>
+    <string name="error">Bir sorun oluştu.</string>
+    <string name="liked">beğenme</string>
+</resources>

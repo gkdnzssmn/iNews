@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/plat"
+    tools:context=".ProfileViewer">
+
+    <xyz.schwaab.avvylib.AvatarView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:avvy_border_color="@color/purple"
+        app:avvy_border_highlight_color="@color/purple"
+        app:avvy_border_highlight_color_end="@color/red"
+        app:avvy_border_thickness="2dp"
+        app:avvy_border_thickness_highlight="3dp"
+        app:avvy_distance_to_border="5dp"
+        app:avvy_highlighted="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:avvy_badge_radius="18dp"
+        app:avvy_badge_stroke_width="2dp"
+        app:avvy_badge_stroke_color="@color/white"
+        app:avvy_badge_color="@color/green"
+        app:avvy_badge_position="BOTTOM_RIGHT"
+        app:avvy_loading_arches="5"
+        app:avvy_loading_arches_degree_area="90"
+        android:id="@+id/avatar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userNM"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/avatar"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:drawablePadding="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userNM"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/userBio"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/userBio"
+        android:id="@+id/profileRecycler"/>
+
+</RelativeLayout>
